@@ -1,9 +1,5 @@
 # Echoes <!-- omit in toc -->
 
-> This is a fork of https://github.com/timberstack/echoes. I wanted to try out denoland as a CDN deploy platform, given the return of `deno bundle` in version 2.4 and its support for bundling for the browser.
-
-> You can just import the exported functions from "https://deno.land/x/echoes@v0.0.3/mod.js". If you have Deno enabled in the workspace, you'll see the intellisense working as expected. Yay!
-
 The `echoes` package is a very simple and straight-forward implementation of the [Observer Pattern](https://www.patterns.dev/vanilla/observer-pattern/). It also takes inspiration from several niceties found in [RxJs](https://github.com/ReactiveX/rxjs) and [Signals](https://github.com/preactjs/signals), such as:
 - Explicit `subscribe` and  `unsubscribe`-like methods (RxJs)
 - `until` method (RxJs)
