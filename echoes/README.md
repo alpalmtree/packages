@@ -31,7 +31,7 @@ Even though it's under active development, the API is stable and it's very unlik
 ## Installation
 
 ```js
-import { echo, computed } from "https://deno.land/x/echoes@v0.0.3/mod.js"
+import { echo, computed } from "https://pkg.alpalmtree.dev/echoes/v0.0.1/mod.js"
 ```
 
 ## Reference (API/Usage)
