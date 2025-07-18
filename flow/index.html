@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script defer src="./uwc.js"></script>
+        <script type="module" src="./index.js"></script>
+    </head>
+    <body>
+        <app-root ctx></app-root>
+        <template id="app">
+            <h1>
+                Hello, <x-txt
+                    val="displayName"
+                    pipe="upperCase toDashes"
+                ></x-txt>
+            </h1>
+            <p>
+                <x-bind
+                    target="#changeName"
+                    on:input="changeHello"
+                    attr:data-count="count"
+                ></x-bind>
+                <input type="text" id="changeName">
+            </p>
+            <button>
+                <x-bind on:click="increment"></x-bind>
+                Increment
+            </button>
+            <button>
+                <x-bind on:click="decrement"></x-bind>
+                Decrement
+            </button>
+
+            <x-show if="showCount">
+                <p>Showing count: <x-txt val="count"></x-txt></p>
+                <p>another child</p>
+            </x-show>
+
+            <p>
+                <button>
+                    <x-bind on:click="createLog"></x-bind>
+                    New log
+                </button>
+            </p>
+            <ul>
+                <x-for const="log" of="logs">
+                    <li>
+                        <x-bind attr:data-key="log.id" class:hidden="hideLog"></x-bind>
+                        Log, <x-txt val="log.value"></x-txt>
+                    </li>
+                </x-for>
+            </ul>
+        </template>
+    </body>
+</html>
